@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberGuard — Sua defesa digital começa aqui</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">🛡️ <span>Cyber</span>Guard</div>
+  <div class="nav-links">
+    <a href="#ameacas">Ameaças</a>
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#checklist">Checklist</a>
+    <a href="#sinais">Sinais de Alerta</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Projeto de Extensão — Segurança da Informação
+    </div>
+    <h1>Sua vida digital merece<br><em>proteção de verdade</em></h1>
+    <p class="hero-subtitle">
+      Ferramentas gratuitas e dicas práticas para qualquer pessoa se defender de vírus, golpes e vazamentos de dados — sem precisar ser especialista em tecnologia.
+    </p>
+
+    <!-- Terminal animado -->
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="terminal-title">cyberguard — verificação de segurança</span>
+      </div>
+      <div class="terminal-body" id="terminal-output">
+        <div><span class="t-prompt">$</span> <span class="t-cmd">iniciar_verificacao --usuario você</span></div>
+      </div>
+    </div>
+
+    <div class="hero-cta-group">
+      <a href="#ferramentas" class="btn-primary">🔍 Ver ferramentas gratuitas</a>
+      <a href="#checklist" class="btn-ghost">📋 Checklist de segurança</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AMEAÇAS -->
+<section class="threats-section" id="ameacas">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">// o que te ameaça</p>
+      <h2 class="section-title">Os golpes mais comuns na internet</h2>
+      <p class="section-sub">Entender o que existe é o primeiro passo para não cair. Veja as principais ameaças do dia a dia digital.</p>
+    </div>
+    <div class="threats-grid">
+      <div class="threat-card red reveal">
+        <div class="threat-icon">🎣</div>
+        <h3>Phishing</h3>
+        <p>E-mails e mensagens falsos que imitam bancos, lojas ou serviços para roubar sua senha ou dados do cartão. São o tipo de ataque mais comum no Brasil.</p>
+      </div>
+      <div class="threat-card red reveal">
+        <div class="threat-icon">🦠</div>
+        <h3>Malware e Vírus</h3>
+        <p>Programas maliciosos que entram no seu dispositivo via downloads suspeitos ou links. Podem espiar o que você digita, sequestrar arquivos ou usar seu computador para atacar outros.</p>
+      </div>
+      <div class="threat-card blue reveal">
+        <div class="threat-icon">🔓</div>
+        <h3>Vazamento de Dados</h3>
+        <p>Quando empresas são hackeadas, seus dados (e-mail, senha, CPF) ficam expostos. Esses dados são vendidos e usados para invadir suas outras contas.</p>
+      </div>
+      <div class="threat-card yellow reveal">
+        <div class="threat-icon">🛒</div>
+        <h3>Sites Falsos de Compra</h3>
+        <p>Lojas virtuais criadas só para enganar: cobram mas não entregam, ou capturam os dados do seu cartão no momento do pagamento.</p>
+      </div>
+      <div class="threat-card yellow reveal">
+        <div class="threat-icon">📱</div>
+        <h3>Engenharia Social</h3>
+        <p>Golpistas que se passam por suporte técnico, parentes ou funcionários de banco para te convencer a entregar suas senhas ou fazer transferências.</p>
+      </div>
+      <div class="threat-card red reveal">
+        <div class="threat-icon">🔒</div>
+        <h3>Ransomware</h3>
+        <p>Um vírus que criptografa todos os seus arquivos e exige pagamento (geralmente em criptomoeda) para devolvê-los. Já afetou hospitais e empresas no mundo todo.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem; font-size:.82rem; color:var(--muted); font-family:var(--font-mono);">
+      📚 Fonte: <a href="https://attack.mitre.org/" target="_blank" style="color:var(--blue);">MITRE ATT&CK</a> — base de dados global com todos os ataques cibernéticos conhecidos e documentados.
+    </p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FERRAMENTAS -->
+<section id="ferramentas">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">// ferramentas gratuitas</p>
+      <h2 class="section-title">Seu kit de defesa digital</h2>
+      <p class="section-sub">Cinco ferramentas gratuitas que qualquer pessoa pode usar agora mesmo, sem instalar nada.</p>
+    </div>
+    <div class="tools-grid">
+
+      <div class="tool-card reveal">
+        <div class="tool-header">
+          <div class="tool-icon-wrap green">🧫</div>
+          <div class="tool-meta">
+            <div class="tool-name">VirusTotal</div>
+            <span class="tool-tag green">ARQUIVOS & LINKS</span>
+          </div>
+        </div>
+        <p class="tool-desc">Analisa arquivos, links e programas usando mais de 70 antivírus ao mesmo tempo. Se recebeu um arquivo suspeito por e-mail ou WhatsApp, jogue aqui antes de abrir.</p>
+        <div class="tool-use"><strong>Como usar:</strong> Acesse o site, arraste o arquivo ou cole o link suspeito. Em segundos você vê se é perigoso.</div>
+        <a href="https://www.virustotal.com/gui/home/upload" target="_blank" class="tool-link">Acessar VirusTotal</a>
+      </div>
+
+      <div class="tool-card reveal">
+        <div class="tool-header">
+          <div class="tool-icon-wrap blue">💧</div>
+          <div class="tool-meta">
+            <div class="tool-name">Have I Been Pwned?</div>
+            <span class="tool-tag blue">VAZAMENTOS</span>
+          </div>
+        </div>
+        <p class="tool-desc">Digite seu e-mail e descubra se ele apareceu em algum vazamento de dados. Se sim, troque a senha daquele serviço imediatamente — e em tudo que usa a mesma senha.</p>
+        <div class="tool-use"><strong>Como usar:</strong> Digite seu e-mail no campo de busca. O site é seguro e não armazena dados pessoais.</div>
+        <a href="https://haveibeenpwned.com" target="_blank" class="tool-link">Verificar meu e-mail</a>
+      </div>
+
+      <div class="tool-card reveal">
+        <div class="tool-header">
+          <div class="tool-icon-wrap red">🎣</div>
+          <div class="tool-meta">
+            <div class="tool-name">CheckPhish</div>
+            <span class="tool-tag red">PHISHING</span>
+          </div>
+        </div>
+        <p class="tool-desc">Scanner especializado em detectar phishing em URLs e e-mails. Identifica sites falsos que imitam bancos, marketplaces e serviços populares com alta precisão.</p>
+        <div class="tool-use"><strong>Como usar:</strong> Cole a URL ou o link recebido no scanner. Ideal para checar promoções e mensagens suspeitas.</div>
+        <a href="https://checkphish.ai" target="_blank" class="tool-link">Escanear link suspeito</a>
+      </div>
+
+      <div class="tool-card reveal">
+        <div class="tool-header">
+          <div class="tool-icon-wrap yellow">🛒</div>
+          <div class="tool-meta">
+            <div class="tool-name">ScamAdviser</div>
+            <span class="tool-tag yellow">LOJAS ONLINE</span>
+          </div>
+        </div>
+        <p class="tool-desc">Analisa sites de compras e verifica se são confiáveis. Usa mais de 40 fontes de dados para calcular uma pontuação de confiança antes de você comprar.</p>
+        <div class="tool-use"><strong>Como usar:</strong> Cole o endereço da loja que quer comprar. Desconfie de pontuações abaixo de 70/100.</div>
+        <a href="https://www.scamadviser.com" target="_blank" class="tool-link">Verificar loja online</a>
+      </div>
+
+      <div class="tool-card reveal">
+        <div class="tool-header">
+          <div class="tool-icon-wrap blue">🗂️</div>
+          <div class="tool-meta">
+            <div class="tool-name">MITRE ATT&CK</div>
+            <span class="tool-tag blue">BASE DE CONHECIMENTO</span>
+          </div>
+        </div>
+        <p class="tool-desc">Base de dados global que documenta todos os tipos de ataques cibernéticos conhecidos, incluindo exemplos reais e casos famosos. Referência usada por especialistas do mundo inteiro.</p>
+        <div class="tool-use"><strong>Para que serve:</strong> Entender como os ataques funcionam para reconhecê-los antes de ser vítima. Mais técnico, mas muito informativo.</div>
+        <a href="https://attack.mitre.org" target="_blank" class="tool-link">Explorar a base de dados</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CHECKLIST -->
+<section class="checklist-section" id="checklist">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">// boas práticas</p>
+      <h2 class="section-title">Checklist de segurança digital</h2>
+      <p class="section-sub">Marque os itens que você já faz. Se algum estiver desmarcado — é por aí que um atacante vai entrar.</p>
+    </div>
+    <div class="checklist-cols">
+      <div class="checklist-group reveal">
+        <h3>🔑 Senhas & Acesso</h3>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Senhas diferentes para cada conta</strong>Usar a mesma senha em tudo é como usar a mesma chave para casa, carro e cofre.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Autenticação em dois fatores (2FA) ativada</strong>Mesmo que roubem sua senha, não conseguem entrar sem o código do celular.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Usando um gerenciador de senhas</strong>Apps como Bitwarden ou Google Password Manager guardam senhas complexas para você.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Senhas com 12+ caracteres (letras, números, símbolos)</strong>"123456" e datas de nascimento são as primeiras tentativas de qualquer hacker.</div>
+        </div>
+      </div>
+
+      <div class="checklist-group reveal">
+        <h3>💻 Dispositivos & Atualizações</h3>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Sistema operacional sempre atualizado</strong>As atualizações corrigem brechas de segurança descobertas — procrastinar é risco.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Apps instalados somente de lojas oficiais</strong>APKs de fontes desconhecidas são o principal vetor de vírus em celular.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Antivírus ativo (no computador)</strong>Windows Defender já basta — mas precisa estar ativo e atualizado.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Backup dos arquivos importantes</strong>Regra 3-2-1: 3 cópias, em 2 mídias diferentes, 1 fora de casa (nuvem).</div>
+        </div>
+      </div>
+
+      <div class="checklist-group reveal">
+        <h3>🌐 Navegação & E-mail</h3>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Verifico se o site tem "https://" antes de colocar dados</strong>O cadeado na barra de endereço indica conexão criptografada.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Não clico em links de e-mails suspeitos</strong>Passo o mouse em cima do link para ver o endereço real antes de clicar.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Evito Wi-Fi público para dados sensíveis</strong>Redes abertas podem ser monitoradas. Use dados móveis para internet banking.</div>
+        </div>
+        <div class="check-item">
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text"><strong>Revisei meu e-mail no Have I Been Pwned</strong>Sei se meus dados vazaram e já tomei as providências necessárias.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SINAIS DE ALERTA -->
+<section id="sinais">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow">// reconheça antes de cair</p>
+      <h2 class="section-title">Sinais de que algo é golpe</h2>
+      <p class="section-sub">Aprenda a reconhecer os padrões que quase todos os golpes têm em comum — independente do formato.</p>
+    </div>
+    <div class="alerts-grid">
+      <div class="alert-item reveal">
+        <div class="alert-icon">⚡</div>
+        <p><strong>Urgência exagerada</strong>"Sua conta será bloqueada em 24h!" Golpistas criam pressão para você agir sem pensar.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">🎁</div>
+        <p><strong>Ofertas boas demais</strong>iPhone por R$200, emprego que paga R$5.000/dia sem experiência. Se parece irreal, é.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">🔗</div>
+        <p><strong>Links com erros no endereço</strong>"bradesco-seguro.com" ou "mercadolivre-oficial.net" — domínios suspeitos imitam os originais.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">📎</div>
+        <p><strong>Anexos inesperados</strong>Boleto, nota fiscal ou "foto de você" que você não pediu — não abra sem verificar no VirusTotal.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">🏦</div>
+        <p><strong>Banco pedindo senha por e-mail</strong>Nenhum banco, operadora ou serviço sério pede senha por mensagem ou e-mail. Nunca.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">💸</div>
+        <p><strong>Pagar para receber</strong>"Você ganhou R$50.000 — pague R$300 de taxa para liberar." Prêmio real não cobra antecipação.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">📝</div>
+        <p><strong>Erros de ortografia e formatação</strong>E-mails com erros, layouts tortos e logos borrados são sinal de origem fraudulenta.</p>
+      </div>
+      <div class="alert-item reveal">
+        <div class="alert-icon">🤫</div>
+        <p><strong>"Não conta pra ninguém"</strong>Qualquer pedido de sigilo — principalmente envolvendo dinheiro — é sinal vermelho imediato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    🛡️ <strong style="color:var(--text)">CyberGuard</strong> — Projeto de Extensão Universitária · Segurança da Informação<br>
+    Ferramentas externas vinculadas são de terceiros e gratuitas: 
+    <a href="https://www.virustotal.com" target="_blank">VirusTotal</a> · 
+    <a href="https://haveibeenpwned.com" target="_blank">HaveIBeenPwned</a> · 
+    <a href="https://checkphish.ai" target="_blank">CheckPhish</a> · 
+    <a href="https://www.scamadviser.com" target="_blank">ScamAdviser</a> · 
+    <a href="https://attack.mitre.org" target="_blank">MITRE ATT&CK</a>
+  </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
